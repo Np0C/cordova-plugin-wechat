@@ -7,6 +7,7 @@ import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import com.jianzhi_inc.dandelion.wechat.WeChat;
 
 
 public class WXEntryActivity extends Activity implements IWXAPIEventHandler{

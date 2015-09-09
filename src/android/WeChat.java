@@ -1,4 +1,4 @@
-package android;
+package com.jianzhi_inc.dandelion.wechat;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
