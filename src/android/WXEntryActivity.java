@@ -1,5 +1,6 @@
 package android;
 
+import android.util.Log;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
@@ -13,27 +14,17 @@ import com.jianzhi_inc.dandelion.wechat.WeChat;
 public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Log.e("WXShare", "entry activity oncreate called");
         super.onCreate(savedInstanceState);
-        //WeChat.api.handleIntent(getIntent(), this);
-
-        if (WeChat.api == null) {
-            startMainActivity();
-        } else {
-            WeChat.api.handleIntent(getIntent(), this);
-        }
+        WeChat.api.handleIntent(getIntent(), this);
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        Log.e("WXShare", "entry activity onNewIntent called");
         setIntent(intent);
-        //WeChat.api.handleIntent(intent, this);
-
-        if (WeChat.api == null) {
-            startMainActivity();
-        } else {
-            WeChat.api.handleIntent(intent, this);
-        }
+        WeChat.api.handleIntent(intent, this);
     }
 
     protected void startMainActivity() {

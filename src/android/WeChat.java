@@ -59,6 +59,8 @@ public class WeChat extends CordovaPlugin {
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+
+        Log.e("WXShare", "WeChat initialize called");
         String appId = preferences.getString(WECHAT_APPID_KEY, "");
         api = WXAPIFactory.createWXAPI(webView.getContext(), appId, true);
         api.registerApp(appId);
@@ -67,6 +69,7 @@ public class WeChat extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext)
             throws JSONException {
+        Log.e("WXShare", "WeChat execute called");
         if (action.equals("share")) {
             share(args, callbackContext);
         } else {
