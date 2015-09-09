@@ -3,6 +3,7 @@ package com.jianzhi_inc.dandelion.wechat;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
+import android.util.Log;
 import com.tencent.mm.sdk.modelmsg.*;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
@@ -164,6 +165,7 @@ public class WeChat extends CordovaPlugin {
                             message.thumbData = WxShareUtil.bmpToByteArray(thumbBmp, true);
 
                         } catch (Exception e) {
+                            Log.e("WeiXinShare", "Error!!", e);
                             callbackContext.error(ERR_INVALID_OPTIONS);
                             return;
                         }
