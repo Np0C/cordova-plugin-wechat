@@ -90,6 +90,8 @@ public class WeChat extends CordovaPlugin {
             return;
         }
 
+        Log.i("WXShare", "args=" + args.toString());
+
         SendMessageToWX.Req request = new SendMessageToWX.Req();
 
         request.transaction = String.valueOf(System.currentTimeMillis());
