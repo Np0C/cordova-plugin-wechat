@@ -4,14 +4,12 @@
   xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="com.jianzhi_inc.dandelion.wechat"
-  version="0.3.0">
+  version="0.0.1">
   <name>WeChat</name>
   <description>Cordova WeChat Plugin</description>
-  <author>VILIC VANE</author>
+  <author>Sam Tsai</author>
   <license>MIT</license>
   <keywords>cordova,wechat,weixin,微信</keywords>
-  <repo>https://github.com/vilic/cordova-plugin-wechat.git</repo>
-  <issue>https://github.com/vilic/cordova-plugin-wechat/issues</issue>
 
   <js-module src="www/wechat.js" name="wechat">
     <clobbers target="WeChat" />
@@ -121,7 +119,7 @@ src/ios/libWeChatSDK.a 这个文件有两个版本, 一个是 iPhone Only 的, �
       </activity>
     </config-file>
 
-    <source-file src="src/android/libammsdk.jar" target-dir="libs" />
+    <source-file src="libs/libammsdk.jar" target-dir="libs" />
 
     <source-file src="src/android/WeChat.java" target-dir="src/com/jianzhi_inc/dandelion/wechat" />
     <source-file src="src/android/WxShareUtil.java" target-dir="src/com/jianzhi_inc/dandelion/wechat" />
