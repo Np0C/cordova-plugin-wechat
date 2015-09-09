@@ -112,8 +112,6 @@ src/ios/libWeChatSDK.a 这个文件有两个版本, 一个是 iPhone Only 的, �
       </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
       <activity
           android:name=".wxapi.WXEntryActivity"
           android:label="@string/launcher_name"
